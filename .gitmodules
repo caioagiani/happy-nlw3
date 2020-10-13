@@ -1,3 +1,6 @@
 [submodule "web"]
 	path = web
 	url = git@github.com:caioagiani/nlw3-happy.git
+[submodule "backend"]
+	path = backend
+	url = git@github.com:caioagiani/nlw3-happy.git
