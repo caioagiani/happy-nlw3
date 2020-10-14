@@ -1,36 +1,36 @@
-import { MigrationInterface, QueryRunner, Table } from "typeorm";
+import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
 export class createImages1602602257230 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
-        name: "images",
+        name: 'images',
         columns: [
           {
-            name: "id",
-            type: "integer",
+            name: 'id',
+            type: 'integer',
             unsigned: true,
             isPrimary: true,
             isGenerated: true,
-            generationStrategy: "increment",
+            generationStrategy: 'increment',
           },
           {
-            name: "path",
-            type: "varchar",
+            name: 'path',
+            type: 'varchar',
           },
           {
-            name: "orphanage_id",
-            type: "integer",
+            name: 'orphanage_id',
+            type: 'integer',
           },
         ],
         foreignKeys: [
           {
-            name: "ImageOrphanage",
-            columnNames: ["orphanage_id"],
-            referencedTableName: "orphanages",
-            referencedColumnNames: ["id"],
-            onUpdate: "CASCADE",
-            onDelete: "CASCADE",
+            name: 'ImageOrphanage',
+            columnNames: ['orphanage_id'],
+            referencedTableName: 'orphanages',
+            referencedColumnNames: ['id'],
+            onUpdate: 'CASCADE',
+            onDelete: 'CASCADE',
           },
         ],
       })
@@ -38,6 +38,6 @@ export class createImages1602602257230 implements MigrationInterface {
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable("images");
+    await queryRunner.dropTable('images');
   }
 }
