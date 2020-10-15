@@ -4,3 +4,6 @@
 [submodule "backend"]
 	path = backend
 	url = git@github.com:caioagiani/nlw3-happy.git
+[submodule "mobile"]
+	path = mobile
+	url = git@github.com:caioagiani/nlw3-happy.git

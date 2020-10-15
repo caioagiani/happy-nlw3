@@ -16,11 +16,11 @@
 ```sh
 $ git clone git@github.com:caioagiani/happy-nlw3.git
 
-$ cd (frontend) or (backend)
+$ cd (frontend) or (backend) or (mobile)
 
 $ yarn install
 
-$ yarn start (frontend) or yarn dev (backend)
+$ yarn start (frontend) or yarn dev (backend) or yarn start (mobile)
 ```
 
 ---
